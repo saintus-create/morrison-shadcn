@@ -1,11 +1,51 @@
+import { FieldSeparator } from "@/components/ui/field"
+
+import { AppearanceSettings } from "@/components/appearance-settings"
+import { ButtonGroupDemo } from "@/components/button-group-demo"
+import { ButtonGroupInputGroup } from "@/components/button-group-input-group"
+import { ButtonGroupNested } from "@/components/button-group-nested"
+import { ButtonGroupPopover } from "@/components/button-group-popover"
+import { EmptyAvatarGroup } from "@/components/empty-avatar-group"
+import { FieldCheckbox } from "@/components/field-checkbox"
+import { FieldDemo } from "@/components/field-demo"
+import { FieldHear } from "@/components/field-hear"
+import { FieldSlider } from "@/components/field-slider"
+import { InputGroupButtonExample } from "@/components/input-group-button-example"
+import { InputGroupDemo } from "@/components/input-group-demo"
+import { ItemDemo } from "@/components/item-demo"
+import { NotionPromptForm } from "@/components/notion-prompt-form"
+import { SpinnerBadge } from "@/components/spinner-badge"
+import { SpinnerEmpty } from "@/components/spinner-empty"
+
 export function RootComponents() {
   return (
     <div className="theme-container mx-auto grid gap-8 py-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6 2xl:gap-8">
       <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
-        <div className="border rounded-lg p-4">
-          <h3 className="font-semibold mb-2">Component Examples</h3>
-          <p className="text-sm text-muted-foreground">This is where the component demonstrations would appear.</p>
+        <FieldDemo />
+      </div>
+      <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
+        <EmptyAvatarGroup />
+        <SpinnerBadge />
+        <ButtonGroupInputGroup />
+        <FieldSlider />
+        <InputGroupDemo />
+      </div>
+      <div className="flex flex-col gap-6 *:[div]:w-full *:[div]:max-w-full">
+        <InputGroupButtonExample />
+        <ItemDemo />
+        <FieldSeparator className="my-4">Appearance Settings</FieldSeparator>
+        <AppearanceSettings />
+      </div>
+      <div className="order-first flex flex-col gap-6 lg:hidden xl:order-last xl:flex *:[div]:w-full *:[div]:max-w-full">
+        <NotionPromptForm />
+        <ButtonGroupDemo />
+        <FieldCheckbox />
+        <div className="flex justify-between gap-4">
+          <ButtonGroupNested />
+          <ButtonGroupPopover />
         </div>
+        <FieldHear />
+        <SpinnerEmpty />
       </div>
     </div>
   )
