@@ -35,7 +35,7 @@ export default function Home() {
                   Morrison shadcn
                 </span>
               </div>
-              <div className="hidden lg:flex items-center gap-10">
+              <div className="hidden lg:flex items-center gap-8">
                 <a href="#" className="text-sm text-neutral-300 hover:text-gold transition-all duration-600 ease-out-quint hover:scale-105">
                   Components
                 </a>
@@ -50,7 +50,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
               <Button variant="ghost" size="sm" className="text-neutral-300 hover:text-neutral-100 border border-neutral-700/50 hover:border-neutral-600 hover:bg-neutral-800/50 transition-all duration-600 ease-out-quint">
                 <Github className="h-5 w-5 mr-2" strokeWidth={1.5} />
                 Star 12.8k
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
             {/* Elegant Headline with Sophisticated Typography */}
-            <h1 className="text-9xl font-light tracking-tightest leading-none mb-12">
+            <h1 className="text-9xl font-light tracking-tightest leading-none mb-12 text-center">
               Build
               <br />
               <span className="bg-gradient-to-r from-gold via-platinum to-neutral-100 bg-clip-text text-transparent">
@@ -87,14 +87,14 @@ export default function Home() {
             </h1>
             
             {/* Refined Subheadline */}
-            <p className="text-lg text-neutral-400 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-lg text-neutral-400 max-w-4xl mx-auto leading-relaxed font-light text-center">
               The only component library that delivers
               <span className="text-neutral-100 font-normal"> 100% authentic</span> shadcn/ui components 
               with zero configuration. Just copy, paste, and deploy.
             </p>
             
             {/* Sophisticated CTAs */}
-            <div className="mt-16 flex flex-col sm:flex-row justify-center gap-8">
+            <div className="mt-16 flex flex-col sm:flex-row justify-center gap-8 items-center">
               <Button size="lg" className="bg-gold text-neutral-950 hover:bg-gold/90 border-0 text-lg px-12 py-6 shadow-2xl hover:shadow-gold/25 transform hover:scale-105 transition-all duration-600 ease-out-quint h-12 font-normal">
                 <Sparkles className="h-6 w-6 mr-3" strokeWidth={1.5} />
                 Start Building Now
@@ -178,8 +178,8 @@ export default function Home() {
           {/* Sophisticated Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Left Side - Enhanced Visual Element */}
-            <div className="lg:col-span-7">
-              <div className="relative">
+            <div className="lg:col-span-7 flex justify-center">
+              <div className="relative max-w-full">
                 {/* Refined Screenshot/Visual */}
                 <div className="relative bg-neutral-800/50 rounded-3xl border border-neutral-700/50 overflow-hidden shadow-2xl backdrop-blur-sm">
                   <div className="p-12">
@@ -222,43 +222,43 @@ export default function Home() {
             
             {/* Right Side - Refined Benefits */}
             <div className="lg:col-span-5 space-y-12">
-              <div>
-                <div className="flex items-center gap-6 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/20 to-platinum/20 border border-gold/30 flex items-center justify-center">
-                    <Zap className="h-8 w-8 text-gold" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-2xl font-light text-neutral-100 tracking-tighter">Zero Config Magic</h3>
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/20 to-platinum/20 border border-gold/30 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Zap className="h-8 w-8 text-gold" strokeWidth={1.5} />
                 </div>
-                <p className="text-neutral-400 text-lg leading-relaxed font-light">
-                  Copy. Paste. Done. No build tools, no configuration, no headaches. 
-                  Pure components that just work.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-light text-neutral-100 tracking-tighter mb-4">Zero Config Magic</h3>
+                  <p className="text-neutral-400 text-lg leading-relaxed font-light">
+                    Copy. Paste. Done. No build tools, no configuration, no headaches. 
+                    Pure components that just work.
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <div className="flex items-center gap-6 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500/20 to-teal-600/20 border border-green-500/30 flex items-center justify-center">
-                    <Code className="h-8 w-8 text-green-400" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-2xl font-light text-neutral-100 tracking-tighter">100% Authentic</h3>
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500/20 to-teal-600/20 border border-green-500/30 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Code className="h-8 w-8 text-green-400" strokeWidth={1.5} />
                 </div>
-                <p className="text-neutral-400 text-lg leading-relaxed font-light">
-                  Every component is identical to the official shadcn/ui registry. 
-                  No shortcuts, no compromises.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-light text-neutral-100 tracking-tighter mb-4">100% Authentic</h3>
+                  <p className="text-neutral-400 text-lg leading-relaxed font-light">
+                    Every component is identical to the official shadcn/ui registry. 
+                    No shortcuts, no compromises.
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <div className="flex items-center gap-6 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-600/20 border border-purple-500/30 flex items-center justify-center">
-                    <Rocket className="h-8 w-8 text-purple-400" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-2xl font-light text-neutral-100 tracking-tighter">Production Ready</h3>
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-600/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Rocket className="h-8 w-8 text-purple-400" strokeWidth={1.5} />
                 </div>
-                <p className="text-neutral-400 text-lg leading-relaxed font-light">
-                  TypeScript, accessibility, and performance baked in. 
-                  Built for teams that ship.
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-light text-neutral-100 tracking-tighter mb-4">Production Ready</h3>
+                  <p className="text-neutral-400 text-lg leading-relaxed font-light">
+                    TypeScript, accessibility, and performance baked in. 
+                    Built for teams that ship.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -315,7 +315,7 @@ export default function Home() {
             </p>
             
             {/* Sophisticated CTAs */}
-            <div className="flex flex-col sm:flex-row justify-center gap-8 mb-16">
+            <div className="flex flex-col sm:flex-row justify-center gap-8 mb-16 items-center">
               <Button size="lg" className="bg-gold text-neutral-950 hover:bg-gold/90 text-xl px-16 py-6 shadow-2xl hover:shadow-gold/25 transform hover:scale-105 transition-all duration-600 ease-out-quint h-14 font-normal">
                 <Rocket className="h-6 w-6 mr-3" strokeWidth={1.5} />
                 Deploy in 30 Seconds
@@ -363,7 +363,7 @@ export default function Home() {
                 The most authentic shadcn/ui component library for modern web development. 
                 Built by developers, for developers.
               </p>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4">
                 <Button variant="outline" size="sm" className="border-neutral-700/50 text-neutral-300 hover:border-gold hover:text-gold transition-all duration-600 ease-out-quint">
                   <Github className="h-5 w-5 mr-2" strokeWidth={1.5} />
                   12.8k stars
@@ -412,13 +412,13 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Bottom Section */}
+          {/* Bottom Section - Symmetrical */}
           <div className="border-t border-neutral-800/50 mt-24 pt-12 flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="flex flex-col sm:flex-row items-center gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
               <p className="text-neutral-400 text-sm font-light">
                 © 2025 Morrison shadcn. Built with ❤️ for the community.
               </p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <Badge variant="secondary" className="bg-neutral-800/50 text-neutral-300 border-neutral-700/50 font-light">TypeScript</Badge>
                 <Badge variant="secondary" className="bg-neutral-800/50 text-neutral-300 border-neutral-700/50 font-light">Next.js 16</Badge>
                 <Badge variant="secondary" className="bg-neutral-800/50 text-neutral-300 border-neutral-700/50 font-light">shadcn/ui</Badge>
