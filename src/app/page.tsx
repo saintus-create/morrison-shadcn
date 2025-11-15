@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button-v4"
 
 import { RootComponents } from "./components"
 
-const title = "The Foundation for your Design System"
+const title = "The Foundation for your Design System [DEPLOYMENT TEST - SHOULD SHOW ON SITE]"
 const description =
   "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code."
 
