@@ -1,24 +1,11 @@
 import { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
-
-import { Annotation } from "@/components/annotation"
-import { ExamplesNav } from "@/components/examples-nav"
-import {
-  PageActions,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header"
-import { PageNav } from "@/components/page-nav"
-import { ThemeSelector } from "@/components/theme-selector"
 import { Button } from "@/components/ui/button"
+import { ArrowRight, Check, Code, Sparkles } from "lucide-react"
 
-import { RootComponents } from "./components"
-
-const title = "🚀 SUCCESS DEPLOYMENT WORKING 🚀 The Foundation for your Design System"
-const description =
-  "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code."
+const title = "shadcn/ui Components"
+const subtitle = "Powered by Base UI"
+const description = "Beautifully crafted shadcn/ui components providing a solid foundation to build modern and elegant interfaces with speed."
 
 export const dynamic = "force-static"
 export const revalidate = false
@@ -47,51 +34,80 @@ export const metadata: Metadata = {
   },
 }
 
-export default function IndexPage() {
+const features = [
+  { name: 'Beautifully Crafted', icon: Sparkles },
+  { name: 'Fully Accessible', icon: Check },
+  { name: 'Customizable', icon: Code },
+  { name: 'Open Source', icon: Code },
+  { name: 'TypeScript', icon: Code },
+  { name: 'Powered by Base UI', icon: Code },
+]
+
+export default function Home() {
   return (
-    <div className="flex flex-1 flex-col">
-      <PageHeader>
-        <Annotation />
-        <PageHeaderHeading className="max-w-4xl">{title}</PageHeaderHeading>
-        <PageHeaderDescription>{description}</PageHeaderDescription>
-        <PageActions>
-          <Button asChild size="sm">
-            <Link href="/docs/installation">Get Started</Link>
-          </Button>
-          <Button asChild size="sm" variant="ghost">
-            <Link href="/docs/components">View Components</Link>
-          </Button>
-        </PageActions>
-      </PageHeader>
-      <PageNav className="hidden md:flex">
-        <ExamplesNav className="[&>a:first-child]:text-primary flex-1 overflow-hidden " />
-        <ThemeSelector className="mr-4 hidden md:flex " />
-      </PageNav>
-      <div className="container-wrapper section-soft flex-1 pb-6">
-        <div className="container overflow-hidden">
-          <section className="border-border/50 -mx-4 w-[160vw] overflow-hidden rounded-lg border md:hidden md:w-[150vw]">
-            <Image
-              src="/r/styles/new-york-v4/dashboard-01-light.png"
-              width={1400}
-              height={875}
-              alt="Dashboard"
-              className="block dark:hidden"
-              priority
-            />
-            <Image
-              src="/r/styles/new-york-v4/dashboard-01-dark.png"
-              width={1400}
-              height={875}
-              alt="Dashboard"
-              className="hidden dark:block"
-              priority
-            />
-          </section>
-          <section className="theme-container hidden md:block">
-            <RootComponents />
-          </section>
+    <div className="min-h-screen bg-background">
+      <main className="container mx-auto px-4">
+        {/* Hero Section */}
+        <section className="py-24 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-foreground">
+              {title}
+            </h1>
+            <p className="text-xl text-muted-foreground mt-4">
+              {subtitle}
+            </p>
+            <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+              {description}
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="gap-2">
+                <Link href="/docs">
+                  Get Started <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/docs/components">
+                  Components
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-12">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((feature, index) => {
+                const Icon = feature.icon
+                return (
+                  <div 
+                    key={index} 
+                    className="p-6 rounded-lg border bg-card hover:bg-accent/50 transition-colors flex items-start gap-4"
+                  >
+                    {Icon && (
+                      <div className="p-2 rounded-md bg-primary/10 text-primary">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="font-medium text-foreground">
+                        {feature.name}
+                      </h3>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="py-12 border-t border-border mt-12">
+        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+          <p>Built with ❤️ by the community</p>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }

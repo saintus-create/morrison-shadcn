@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
-import { Badge } from "@/registry/new-york-v4/ui/badge"
+import { Badge } from "@/components/ui/badge"
 
-export function Announcement() {
+export function Annotation() {
   return (
     <Badge asChild variant="secondary" className="bg-transparent">
       <Link href="/docs/changelog">

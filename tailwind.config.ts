@@ -1,8 +1,11 @@
 import { type Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
-  darkMode: ["class"],
-  content: ["./src/**/*.{ts,tsx}"],
+  darkMode: ["class", "[data-theme='dark']"],
+  content: [
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -13,8 +16,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        sans: ["var(--font-sans)"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -72,5 +74,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;
