@@ -12,7 +12,7 @@ import {
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
-import { Button } from "@/components/ui/button-v4"
+import { Button } from "@/components/ui/button"
 
 import { RootComponents } from "./components"
 
